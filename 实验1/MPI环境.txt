@@ -1,0 +1,20 @@
+C/C++ 预处理器 
+
+_CRT_SECURE_NO_WARNINGS
+MPICH_SKIP_MPICXX
+
+C/C++ 代码生成 运行库
+多线程调试
+
+连接器 附加依赖项 msmpi.lib
+
+链接器 常规 附加库目录 $(MSMPI_LIB32)
+
+调试 命令 C:\Program Files\Microsoft MPI\Bin\mpiexec.exe
+命令参数 -n 4 $(TargetPath)
+
+C/C++ 常规 附加包含目录  
+$(MSMPI_INC)
+$(MSMPI_INC)\x86
+
+不使用预编译头
